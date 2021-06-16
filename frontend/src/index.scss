@@ -1,0 +1,206 @@
+@import "variable";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-size: 1.6rem;
+}
+
+#root {
+  height: 100%;
+}
+
+// Container
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 7rem 1fr 5rem;
+  height: 100%;
+
+  header {
+    grid-area: header;
+    background-color: $color-dark;
+  }
+  main {
+    grid-area: main;
+  }
+  footer {
+    grid-area: footer;
+    background-color: $color-dark;
+    color: $color-white;
+  }
+}
+
+// Tag default
+a {
+  text-decoration: none;
+  color: $color-white;
+}
+input,
+button {
+  border: none;
+  outline: none;
+  padding: 0;
+  padding-left: 1rem;
+  cursor: pointer;
+}
+input:disabled {
+  background: white;
+  cursor: auto;
+}
+select {
+  outline: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  background-color: $color-gray-light;
+  box-shadow: 0 0 1 0.5rem solid $color-gray;
+}
+h1 {
+  margin: 0 0 1rem 0;
+}
+h2 {
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
+}
+h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.8rem;
+}
+p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+li {
+  margin-bottom: 1rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    padding: 1rem;
+    border: 0.1rem solid black;
+  }
+
+  > tbody {
+    > tr {
+      &:nth-child(2n - 1) {
+        background-color: $color-gray-light;
+      }
+
+      > td:last-child {
+        text-align: center;
+        padding: 1rem 0;
+
+        > div {
+          display: flex;
+          justify-content: space-evenly;
+
+          > button {
+            padding: 1rem;
+            border-radius: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// common class
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.primary {
+  background-color: $color-dark;
+  color: $color-yellow;
+
+  &:hover {
+    box-shadow: 0 0 0 2px $color-yellow;
+  }
+  &:focus {
+    box-shadow: 0 0 0 2px $color-yellow;
+    background-color: $color-white;
+    color: $color-dark;
+    transition: 0.5s;
+  }
+  &.block {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+}
+.active {
+  box-shadow: 0 0 0 2px $color-yellow;
+  background-color: $color-white;
+  color: $color-dark;
+}
+.disabled {
+  opacity: 0.5;
+}
+.dropdown-caret {
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+
+  &__content {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    display: none;
+    background-color: $color-dark;
+    min-width: 13rem;
+    padding: 1rem;
+    margin: 0;
+    margin-top: 1.1rem;
+    border-radius: 0.5rem;
+
+    > a {
+      > li {
+        font-size: 1.6rem;
+        margin: 0;
+        padding: 0.5rem 0;
+      }
+      > div {
+        height: 0.1rem;
+        background-color: none;
+      }
+      &:hover > div {
+        background-color: $color-yellow;
+      }
+    }
+  }
+
+  &:hover &__content {
+    display: block;
+  }
+  &:focus {
+    display: block;
+  }
+}
+.link {
+  color: $color-blue;
+}
+.disabled {
+  opacity: 0.5;
+}

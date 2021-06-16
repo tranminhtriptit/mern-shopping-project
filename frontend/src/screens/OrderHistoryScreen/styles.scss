@@ -1,0 +1,28 @@
+@import "variable";
+
+.order-history-screen {
+  padding: 2rem;
+  max-width: 130rem;
+  margin: auto;
+}
+
+@media (max-width: 960px) {
+  .order-history-screen {
+    th,
+    td {
+      font-size: 1.5rem;
+    }
+  }
+}
+@media (max-width: 780px) {
+  .order-history-screen {
+    th,
+    td {
+      font-size: 1.3rem;
+    }
+    button {
+      font-size: 1.2rem;
+      padding: 0.8rem !important;
+    }
+  }
+}

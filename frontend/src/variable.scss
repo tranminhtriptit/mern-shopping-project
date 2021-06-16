@@ -1,0 +1,24 @@
+$color-dark: rgb(41, 40, 36);
+$color-white: rgba(246, 244, 244, 0.959);
+$color-yellow: rgba(251, 202, 40, 0.986);
+$color-yellow-darker: rgba(233, 170, 24, 0.986);
+$color-gray: rgba(194, 189, 189, 0.945);
+$color-gray-light: rgba(229, 226, 226, 0.945);
+$color-red: rgb(182, 46, 46);
+$color-green: rgb(1, 151, 1);
+$color-blue: rgb(0, 60, 255);
+
+$font-color-1: rgb(12, 11, 11);
+$font-color-2: rgba(37, 35, 35, 0.883);
+$font-color-3: rgb(93, 87, 87);
+
+@mixin fast-transition {
+  transition: all 0.2s ease-in-out;
+}
+@mixin low-transition {
+  transition: all 0.5s ease-in-out;
+}
+@mixin become-yellow($size) {
+  color: $color-yellow-darker;
+  box-shadow: 0 0 0 #{$size} $color-yellow-darker;
+}

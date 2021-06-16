@@ -1,0 +1,10 @@
+@import "variable";
+
+.rating {
+  color: rgb(255, 187, 0);
+
+  > span:last-child {
+    color: $font-color-3;
+    margin-left: 0.5rem;
+  }
+}

@@ -1,0 +1,15 @@
+@import "variable";
+
+.pagination {
+  width: 100%;
+
+  > div {
+    display: flex;
+
+    button {
+      padding: 1rem 2rem;
+      font-size: 1.7rem;
+      margin: 0 0.5rem;
+    }
+  }
+}

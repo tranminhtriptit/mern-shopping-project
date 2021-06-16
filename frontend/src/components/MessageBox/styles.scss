@@ -1,0 +1,16 @@
+@import "variable";
+
+.alert {
+  padding: 1rem;
+  border: 0.1rem solid transparent;
+  border: 0.5rem;
+
+  &__danger {
+    color: rgb(255, 0, 64);
+    background-color: rgb(255, 192, 213);
+  }
+  &__info {
+    color: rgb(2, 122, 2);
+    background-color: rgb(141, 255, 107);
+  }
+}
